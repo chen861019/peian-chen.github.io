@@ -1,4 +1,4 @@
-baseurl = "https://peian-chen.github.io/"
+baseurl = "https://chen861019.github.io/peian-chen/"
 languageCode = "zh-tw"
 theme = "terminal"
 pagination.pagerSize = 5
