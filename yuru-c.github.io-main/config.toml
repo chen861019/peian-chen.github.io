@@ -1,0 +1,62 @@
+baseurl = "https://yuru-c.github.io/"
+languageCode = "zh-tw"
+theme = "terminal"
+pagination.pagerSize = 5
+defaultContentLanguage = "zh-tw"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  customCSS = ["css/custom.css"]
+  contentTypeName = "posts"
+  showMenuItems = 5
+  fullWidthTheme = false
+  centerTheme = false
+  favicon = "favicon.ico"
+  showReadMore = false
+  displayReadMore = false
+
+[sitemaps]
+  disable = true
+
+[languages]
+  [languages.zh-tw]
+    title = "yuru's Portfolio"
+    subtitle = ""
+    keywords = ""
+    copyright = "© 2026 yuru"
+    menuMore = "顯示更多"
+    readMore = "閱讀全文"
+    readOtherPosts = "閱讀其他文章"
+
+    [languages.zh-tw.params.logo]
+      logoText = " yuru "
+      logoHomeLink = "/"
+
+    [languages.zh-tw.menu]
+      [[languages.zh-tw.menu.main]]
+        identifier = "about"
+        name = "關於我"
+        url = "/#about"
+        weight = 1
+      [[languages.zh-tw.menu.main]]
+        identifier = "skill"
+        name = "技能"
+        url = "/#skill"
+        weight = 2
+      [[languages.zh-tw.menu.main]]
+        identifier = "experience"
+        name = "工作經歷"
+        url = "/#experience"
+        weight = 3
+      [[languages.zh-tw.menu.main]]
+        identifier = "research"
+        name = "研究動機"
+        url = "/#research"
+        weight = 4
+      [[languages.zh-tw.menu.main]]
+        identifier = "display"
+        name = "實作展示"
+        url = "/#display"
+        weight = 5
