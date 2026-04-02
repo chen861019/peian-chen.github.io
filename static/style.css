@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 
 :root {
-  --background: #d5def2;
-  --foreground: #4b4e6d;
-  --accent: #1f243d;
+  --background: rgba(14, 43, 97, 0.6);
+  --foreground: #e6e9eb;
+  --accent: #e6e9eb;
   --font-family: 'Noto Sans TC', sans-serif;
   --code-font-family: 'Fira Code', monospace;
-  --menu: #bec3d6;
+  --menu: rgba(0, 12, 78, 0.6);
 }
 
 code, pre {
@@ -40,37 +40,37 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%; /* 禁止 iOS 自動縮放文字 */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
 
 .header {
-    position: fixed;      /* 改為固定定位 */
-    top: 0;               /* 貼齊頂部 */
-    left: 0;              /* 貼齊左側 */
-    width: 100%;          /* 務必設定寬度，否則會縮起來 */
-    z-index: 1000;        /* 確保層級最高，不會被經歷卡片遮住 */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     height: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* 讓內容物在 100% 寬度中置中 */
-    background: rgba(0, 11, 211, 0.6);
+    align-items: center;
+    background: var(--menu);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-bottom: 2px solid rgba(17, 35, 76, 0.5);
+    border-bottom: 2px solid rgba(137, 136, 139, 0.5);
     padding: 15px 0;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+ */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
 .header__inner {
-    width: 1100px;        /* 鎖定你的容器寬度 */
-    max-width: 95%;       /* 手機版不爆出去 */
-    margin: 0 auto;       /* 左右自動留白，達成置中 */
-    height: 50px;         /* 建議給個固定高度，方便計算 body 的推擠距離 */
+    width: 1100px;
+    max-width: 95%;
+    margin: 0 auto;
+    height: 50px;
     padding: 0 40px;
     flex-wrap: nowrap !important;
     flex-direction: row !important;
@@ -105,15 +105,15 @@ html {
 }
 
 .menu__dropdown {
-    top: 100%;               /* 讓選單剛好在 Header 下方出現 */
-    right: 0;                /* 靠右對齊 */
+    top: 100%;
+    right: 0;
     left: auto;
     list-style: none;
     margin-left: 10px;
     z-index: 1000;
     box-shadow: 0 0px var(--background), 0px 0px var(--background), 0px 0px var(--background);
     border: 2px solid var(--accent);
-    background: rgba(231, 214, 191, 0.9);
+    background: var(--menu);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     width: 90.5px;    
@@ -151,43 +151,43 @@ html {
 
 .profile-pic-wrapper {
     display: flex;
-    justify-content: center; /* 水平置中 */
+    justify-content: center;
     align-items: center;
-    width: 150px; 
-    height: 150px;
+    width: 200px; 
+    height: 200px;
     perspective: 1000px;
     cursor: pointer;    
     margin-left: 20px;
     flex-shrink: 0;
     align-self: center;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+ */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
-    -webkit-backface-visibility: hidden; /* 防止翻轉時背面變透明/空白 */
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform-style: preserve-3d;        /* 強化 3D 渲染效果 */
 }
 
 .profile-pic{
-    display: flex;           /* 新增：讓內部的 #avatar 也能置中 */
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;       /* 確保與圖片寬度一致 */
-    height: 100%;      /* 確保與圖片高度一致 */
-    border-radius: 50%; /* 圓形 */
-    overflow: hidden;   /* 關鍵：把流出去的光切掉 */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
     background-color: rgba(255, 255, 254, 0.1);
     flex-shrink: 0;
     border: 1px solid rgba(255, 255, 255, 0.6);
     cursor: pointer;
     position: relative;
-    backface-visibility: hidden; /* 防止翻轉時背面閃爍 */
-    pointer-events: auto;        /* 確保可以觸發 hover */
+    backface-visibility: hidden;
+    pointer-events: auto;
     will-change: transform;
     transform: translateZ(0);
-    box-shadow: 3px 3px 2px rgba(81, 51, 25, 0.2),
-                -0.1px -0.1px 1px rgba(81, 51, 25, 0.8);
+    box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
+                -0.1px -0.1px 1px rgba(0, 238, 255, 0.8);
     
 }
 
@@ -202,15 +202,15 @@ html {
     background: linear-gradient(
         to right, 
         rgba(255, 255, 255, 0) 0%, 
-        rgba(249, 244, 237, 0.3) 50%, 
+        rgba(237, 242, 249, 0.3) 50%, 
         rgba(255, 255, 255, 0) 100%
     );
     
     transform: skewX(-25deg); 
-    animation: shine-loop 4s infinite ease-in-out;
+    animation: shine-loop 5s infinite ease-in-out;
     pointer-events: none;
     z-index: 1;
-}
+} 
 
 @keyframes shine-loop {
     0% { left: -110%; }
@@ -227,13 +227,13 @@ html {
 }
 
 #avatar{
-    width: 100%;             /* 改成 100% 隨父層縮放 */
+    width: 100%;
     height: 100%; 
-    object-fit: cover;       /* 關鍵：裁切圖片以填滿圓形且不變形 */
+    object-fit: cover;
     border-radius: 50%;    
     flex-shrink: 0;
     padding: 0px;
-    display: block;          /* 消除圖片下方縫隙 */
+    display: block;
     backface-visibility: hidden;
     transition: transform 0.3s;
 }
@@ -271,17 +271,18 @@ html {
 .profile-container,
 .skills-container,
 .custom-section,
-.research-section {
+.research-section,
+.language-container {
     background: linear-gradient(
-        rgba(237, 238, 249, 0.7) 0%, 
-        rgba(255, 255, 255, 0.3) 50% 
+        rgba(95, 95, 97, 0.7) 0%, 
+        rgba(32, 33, 36, 0.3) 50% 
     );
     backdrop-filter: blur(20px) saturate(150%);
     -webkit-backdrop-filter: blur(20px) saturate(150%);
     border-radius: 0 10px 10px 0;
-    border: 0.01px solid rgba(243, 246, 255, 0.8);
-    border-left: 5px solid #7175a6;
-    box-shadow: 3px 3px 2px rgba(25, 40, 81, 0.2);
+    border: 1px solid rgba(243, 246, 255, 0.8);
+    border-left: 5px solid var(--accent);
+    box-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
     overflow: visible;
     transition: transform 0.8s cubic-bezier(0.4,0,0.2,1);
 }
@@ -290,10 +291,11 @@ html {
 .profile-container:hover,
 .skills-container:hover,
 .custom-section:hover,
-.research-section:hover {
+.research-section:hover,
+.language-container:hover {
     transform: scale(1.004);
     border: 1px solid rgba(243, 244, 255, 0.8);
-    border-left: 5px solid #7175a6;
+    border-left: 5px solid var(--accent);
     backdrop-filter: blur(10px) saturate(120%);
     -webkit-backdrop-filter: blur(10px) saturate(120%);
     
@@ -332,15 +334,58 @@ html {
     opacity: 1 ;
 }
 
-.mail {
+.href {
     text-decoration: none;
     font-size: 16px;
 }
 
-.mail:hover{
+
+.href:hover{
     text-decoration: underline;
 }
 
+.language-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 30px 50px;
+    gap: 50px;
+}
+
+.language-item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 254, 0.1);
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    position: relative;
+    backface-visibility: hidden;
+    pointer-events: auto;
+    will-change: transform;
+    transition: background-color 0.8s ease, transform 0.4s ease-out;
+    box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
+                -0.1px -0.1px 1px rgba(0, 21, 255, 0.8);
+    
+}
+
+.language-item:hover {
+    background-color: rgba(255, 255, 254, 0.5);
+    flex-shrink: 0;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    position: relative;
+    box-shadow: 3px 3px 2px rgba(255, 255, 255, 0.3),
+                -0.1px -0.1px 1px rgba(255, 255, 255, 0.8);
+    transform: scale(1.01);
+}
 
 .skills-container {
     padding: 20px 50px;
@@ -678,13 +723,6 @@ html {
     transition: opacity 0.3s ease;
 }
 
-.section-container:hover > .title{
-    border-right: 3px solid var(--foreground) ;
-    animation:
-        blink 1.5s step-end infinite,
-        opacity 0.3s ease;
-}
-
 @keyframes typing {
     from { width: 0 }
     to { width: auto }
@@ -700,16 +738,16 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #f2e6d5; /* 背景底色 */
+  background-color: #000000; /* 背景底色 */
   background-image: 
-    radial-gradient(at 0% 0%, #9ea7ca 0px, transparent 50%), /* 深色點 */
-    radial-gradient(at 50% 0%, #f9f9ff 0px, transparent 50%), /* 亮色點 */
-    radial-gradient(at 100% 0%, #eff2fe 0px, transparent 50%),
-    radial-gradient(at 0% 50%, #ebecf9 0px, transparent 50%),
-    radial-gradient(at 100% 50%, #d5daf2 0px, transparent 50%),
-    radial-gradient(at 0% 100%, #b9b5eb 0px, transparent 50%),
-    radial-gradient(at 50% 100%, #b0ade1 0px, transparent 50%),
-    radial-gradient(at 100% 100%, #ebeff9 0px, transparent 50%);
+    radial-gradient(at 0% 0%, #000000 0px, transparent 50%), /* 深色點 */
+    radial-gradient(at 50% 0%, #090b12 0px, transparent 50%), /* 亮色點 */
+    radial-gradient(at 100% 0%, #010929 0px, transparent 50%),
+    radial-gradient(at 0% 50%, #000000 0px, transparent 50%),
+    radial-gradient(at 100% 50%, #000000 0px, transparent 50%),
+    radial-gradient(at 0% 100%, #2a2c2f 0px, transparent 50%),
+    radial-gradient(at 50% 100%, #0d0e10 0px, transparent 50%),
+    radial-gradient(at 100% 100%, #000000 0px, transparent 50%);
   background-size: 200% 200%;
   animation: cloudMove 10s ease infinite alternate;
 }
@@ -1168,6 +1206,22 @@ transform: scale(1.02);
   .skills-container {
     padding: 20PX;
   }
+
+  .info-wrapper p {
+    margin-right: 40px;
+  }
+
+  .language-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 10px;
+}
+
+.language-item {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 }
 

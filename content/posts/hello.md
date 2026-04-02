@@ -13,19 +13,29 @@ draft: false
 <div class="profile-container">
 <div class="profile-pic-wrapper">
     <div class="profile-pic">
-        <img src="/img/avatar2.png" id="avatar" alt="個人照" >
+        <img src="img/avatar-peian1.jpg" id="avatar" alt="個人照" >
     </div></div>
     <div class="profile-text">
-        <h1 style="text-align: center;  line-height:30px; margin-top:30px;margin-bottom:5px; margin-left:-40px;font-size: 22px;">陳沛安<br> yuru chen</h1>
+        <h1 style="text-align: center;  line-height:30px; margin-top:30px;margin-bottom:5px; margin-left:-40px;font-size: 22px;">陳沛安<br> peian chen</h1>
         <div class="info-wrapper">
         <ul>
-            <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="mailto:shannon0137@gmail.com" class="mail">shannon0137@gmail.com</a></li>
-            <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span style="font-size:16px;">天主教輔仁大學數學系應用數學組</li>
+            <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="chen861019@gmail.com" class="href">chen861019@gmail.com</a></li>
+            <li><span class="fa-li"><i class="fa-brands fa-github"></i></span><a href="https://github.com/chen861019" class="href">github.com/chen861019</a></li>
+            <li><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span style="font-size:16px;">國⽴陽明交通⼤學 博⼠ 電機⼯程學系</li>
                     </ul>
-        <p style="font-size:14px; margin-left:-30px;  padding-left: 1.8em; text-indent: -1.4em;">※ 歡迎來到我的個人網頁！本網頁旨在提供更具深度與動態感的成果展示；基於資安考量，網頁內容已隱去具體之個人敏感資訊。</p><p style="font-size:14px; margin-left:-30px;  padding-left: 1.8em; text-indent: -1.4em;  margin-top:-20px;">※ 關於更詳細的<strong>個人資料與成績證明</strong>，已整理於郵件附件中。若有任何疑問或建議，歡迎隨時與我聯繫，謝謝您。</p>
+        <p style="font-size:16px; margin-left:-30px;">具備嵌入式系統、FPGA與數位電路設計以及感測系統平台相關經驗的電機博⼠候選⼈。熟悉微控制器韌體開發、物聯網系統架構以及邊緣⼈⼯智慧（TinyML），並具備完整的軟硬體整合與系統開發能⼒。期望從事嵌入式系統、數位IC/FPGA設計、邊緣AI與智慧感測系統相關之研發⼯程職務。</p>
         </div>
     </div>
 </div>
+</div>
+
+<div class="section-container"> <h1 id="language" class="title"><i class="fa-solid fa-language"> 語言</h1></i>
+    
+<div class="language-container">
+                <div class="language-item">Chinese</div>
+                <div class="language-item">English</div>
+                <div class="language-item">Japanese <br>(basic)</div>
+            
 </div>
 
 <div class="section-container"> <h1 id="skill" class="title"><i class="fas fa-lightbulb"> 技能</h1></i>
