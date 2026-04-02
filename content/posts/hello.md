@@ -16,7 +16,7 @@ draft: false
         <img src="/img/avatar2.png" id="avatar" alt="個人照" >
     </div></div>
     <div class="profile-text">
-        <h1 style="text-align: center;  line-height:30px; margin-top:30px;margin-bottom:5px; margin-left:-40px;font-size: 22px;">陳郁茹<br> yuru chen</h1>
+        <h1 style="text-align: center;  line-height:30px; margin-top:30px;margin-bottom:5px; margin-left:-40px;font-size: 22px;">陳沛安<br> yuru chen</h1>
         <div class="info-wrapper">
         <ul>
             <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="mailto:shannon0137@gmail.com" class="mail">shannon0137@gmail.com</a></li>

@@ -1,4 +1,4 @@
-baseurl = "https://yuru-c.github.io/"
+baseurl = "https://peian-chen.github.io/"
 languageCode = "zh-tw"
 theme = "terminal"
 pagination.pagerSize = 5
