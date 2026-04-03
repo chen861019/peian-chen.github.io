@@ -97,8 +97,8 @@
 </style>
 
 <script>
-const img1 = "img/avatar-peian1.jpg"; 
-const img2 = "img/avatar-peian2.jpg";
+const img1 = "img/avatar-peian-1.jpg"; 
+const img2 = "img/avatar-peian-2.jpg";
 
   // --- A. 強制初始化：最優先執行的回頂部邏輯 ---
   if ('scrollRestoration' in history) {
@@ -195,7 +195,7 @@ const img2 = "img/avatar-peian2.jpg";
         // 2. 在動畫轉到側面 (90度) 的瞬間換圖
         // 0.8s 的一半是 400ms
         setTimeout(() => {
-            if (apic.src.includes("peian1")) {
+            if (apic.src.includes("peian-1")) {
                 apic.src = img2;
             } else {
                 apic.src = img1;

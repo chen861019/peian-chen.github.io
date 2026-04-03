@@ -88,6 +88,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+const boxes = document.querySelectorAll('.research-box');
+
+boxes.forEach(box => {
+  box.addEventListener('mouseenter', () => {
+    box.classList.add('is-active');
+  }, { once: true }); 
+});
+
 </script>
 
 </body>

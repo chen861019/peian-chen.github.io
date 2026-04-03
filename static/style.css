@@ -440,30 +440,12 @@ html {
     display: flex;
     align-items: center;
     width: 100%;
-    cursor: pointer;
     overflow: hidden; /* 防止線條縮放時溢出 */
     cursor: default;
+    text-shadow: 3px 3px 5px rgba(0, 21, 255, 0.5);
 }
 
-.technology-item::before {
-    content: "";
-    flex-grow: 1;      /* 自動填滿左側所有空間 */
-    height: 2px;
-    margin-right: 15px;
-    background-color: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    opacity: 0.2;
-    transition: transform 1.5s ease-in-out, 
-                opacity 0.8s ease-in-out;
-}
 
-.research-box:hover .technology-item::before {
-    transform: scaleX(1);
-    opacity: 1;
-    transition: transform 0.2s cubic-bezier(0, 0.5, 0.2, 1), 
-                opacity 0.2s cubic-bezier(0, 0.5, 0.2, 1);
-}
 
 .technology {
     white-space: nowrap;
@@ -489,6 +471,18 @@ html {
     margin-bottom: 40px;
 }
 
+.rank {
+    font-size: 16px;
+    border: 1.5px solid var(--background);
+    padding: 2px 4px;    
+    border-radius: 5px;
+    width: 65px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    background-color: rgba(8, 0, 121, 0.1);
+}
+
 @media (min-width: 685px) {
   body, .main, .container {
     /* 把這個數值調小，內容就會往上提 */
@@ -504,7 +498,7 @@ html {
   .skill-item {
     display: inline-block; 
     vertical-align: top;
-    width: 200px;  /* 固定的佔位寬度 */
+    width: 220px;  /* 固定的佔位寬度 */
     height: 45px; /* 固定的高度 */
     margin: 7px;   /* 標籤間距 *//* 給內層 tag 定位用 */
 }
@@ -546,7 +540,7 @@ html {
     cursor: default;
     overflow: hidden;
     white-space: normal;
-    max-width: 200px; /* 初始寬度 */
+    max-width: 220px; /* 初始寬度 */
     max-height: 45px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* 讓動畫變平滑 */
     box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
@@ -747,6 +741,10 @@ html {
 .exp-box {
     display: flex;    
     flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+    align-items: center;    /* 垂直置中 */
+    padding: 2px 0px;
 }
 
 .exp-text strong {
@@ -761,6 +759,40 @@ html {
 .exp-card:hover .exp-text {
     max-height: 500px; /* 展開成就 */
     transition: background 0.5s cubic-bezier(0, 0.5, 0.2, 1);
+}
+
+.technology-item::before {
+    content: "";
+    flex-grow: 1;      /* 自動填滿左側所有空間 */
+    height: 2px;
+    margin-right: 15px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0.2;
+    box-shadow: 3px 3px 5px var(--accent);
+    transition: transform 1.5s ease-in-out, 
+                opacity 0.8s ease-in-out;
+}
+
+.research-box:hover .technology-item::before {
+    transform: scaleX(1);
+    opacity: 1;
+    transition: transform 0.2s cubic-bezier(0, 0.5, 0.2, 1), 
+                opacity 0.2s cubic-bezier(0, 0.5, 0.2, 1);
+}
+
+.research-box.is-active .technology-item::before {
+    transform: scaleX(1);
+    opacity: 1;
+    /* 進場快 (0.2s) */
+    transition: transform 0.2s cubic-bezier(0, 0.5, 0.2, 1), 
+                opacity 0.2s cubic-bezier(0, 0.5, 0.2, 1);
+}
+
+.research-box.is-active .technology {
+    text-shadow: 0 0 5px var(--accent);
+    transition: text-shadow 0.2s cubic-bezier(0, 0.5, 0.2, 1);
 }
 
   
@@ -838,6 +870,7 @@ body {
     justify-content: center;
     align-items: stretch;
     gap: 10px;
+    margin-top: 20px;
     margin-bottom: -1px; /* 銜接邊框 */
     z-index: 5;
     -webkit-user-select: none; /* Safari */
@@ -850,7 +883,7 @@ body {
   .step-box {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(109, 93, 75, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     padding: 15px 20px;
     border-radius: 12px 12px 0 0;
     position: relative;
@@ -871,14 +904,15 @@ body {
     opacity: 1;
     transform: scale(1);
     background: rgba(255, 255, 255, 0.8);
-    border: 0.01px solid rgba(183, 166, 148, 0.8);
-    box-shadow: 3px 0px 2px rgba(81, 51, 25, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
+                -0.1px -0.1px 1px rgba(209, 213, 255, 0.8);
     top: -7px;
   }
 
   .step-num {
     font-size: 16px;
-    color: #9a7979;
+    color: var(--background);
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 0px;
@@ -1014,8 +1048,7 @@ body {
 }
 
 .comparison-container {
-    padding-bottom: 30px;
-    border-bottom: 3px solid #3d2b1f;
+    border-bottom: 3px solid var(--background);
 }
 
 .comp-card {
@@ -1023,9 +1056,10 @@ body {
   background: rgba(255, 255, 255, 0.6);
 
     backdrop-filter: blur(10px);
-  border: 1px solid rgba(109, 93, 75, 0.2);
-  box-shadow: 3px 0px 2px rgba(81, 51, 25, 0.2);
-  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
+                -0.1px -0.1px 1px rgba(209, 213, 255, 0.8);
+    border-radius: 16px;
   padding: 20px 10px 10px 10px;
   position: relative;
   transition: all 0.8s ease;
@@ -1046,11 +1080,11 @@ transform: scale(1.02);
   border-radius: 20px;
   margin-bottom: 5px;
   background: #ffffff;
-  color: #6d5d4b;
+  color: var(--background);
 }
 
 .comp-tag.primary {
-  background: #6d5d4b;
+  background: var(--background);
   color: #fff;
 }
 
@@ -1062,14 +1096,14 @@ transform: scale(1.02);
 }
 
 .comp-content strong {
-  color: #513319;
+  color: var(--background);
 }
 
 .comp-vs {
   font-family: serif;
   font-style: italic;
   font-size: 1.2rem;
-  color: #9a7979;
+  color: #ffffff;
   font-weight: bold;
   opacity: 0.6;
 }
@@ -1187,13 +1221,13 @@ transform: scale(1.02);
 
     .exp-card {
     background: linear-gradient(
-        rgba(240, 237, 249, 0.7) 0%, 
-        rgba(255, 255, 255, 0.3) 50% 
+        rgba(237, 240, 249, 0.7) 0%, 
+        rgba(255, 255, 255, 0.8) 50% 
     );
     padding: 20px;
     border-radius: 0 12px 12px 0;
-    border-left: 5px solid #6d5d4b;
-    transition: transform 0.3s ease;
+    border-left: 5px solid var(--background);
+    transition: background 1s ease-in-out, transform 0.3s ease;
     margin-bottom: 10px;
     position: relative !important;
     overflow: visible !important;
@@ -1201,6 +1235,36 @@ transform: scale(1.02);
 .exp-card:hover {
     background: #ffffff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    color: #313131;
+    transition: background 0.2s cubic-bezier(0, 0.5, 0.2, 1);
+}
+
+.exp-card h4 {
+    display: flex;
+    margin-bottom: 30px;
+    opacity: 0.7; /* 預設半透明 */
+    transition: 0.3s;
+    color: #000000;
+}
+
+.exp-box {
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    line-height: 1.2;
+}
+
+.exp-content {
+    color: #444;
+}
+
+.exp-text {
+    color: #141468;
+}
+
+.exp-text strong {
+    width: 200px;
 }
 
 .exp-dot {
@@ -1210,7 +1274,7 @@ transform: scale(1.02);
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background-color: #6d5d4b;
+    background-color: rgba(0, 23, 116);
     z-index: 3;
     transition: 
         top 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
@@ -1219,10 +1283,14 @@ transform: scale(1.02);
 }
 
 .exp-part:hover .exp-dot {
-    background-color: #6d5d4b;
-    box-shadow: 0 0 10px rgba(87, 79, 54, 0.8);
+    background-color: (96, 84, 68, 0.7);
+    box-shadow: 
+        0 0 5px rgba(118, 136, 255, 0.8),  /* 第一層：近距離強光 */
+        0 0 12px rgba(86, 96, 152, 0.4), /* 第二層：中距離柔光 */
+        0 0 20px rgba(81, 109, 184, 0.2);
     transition: opacity 0.5s ease-out;
 }
+
 
   .step-nav { flex-direction: column; gap: 5px; margin-bottom: 10px; align-items: center;}
     .step-box { width: 100%; border-radius: 10px; justify-content: center;padding-bottom: 35px;}
@@ -1286,6 +1354,59 @@ transform: scale(1.02);
     width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+.technology-item {
+    display: flex;
+    align-items: center;    /* 垂直置中 */
+    justify-content: center; /* 水平置中（核心） */
+}
+
+.technology {
+    white-space: normal;
+    display: flex;
+    
+}
+
+.technology::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;      /* 稍微離開文字底端 */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent);
+    
+    transform: scaleX(0);     /* 預設縮小 */
+    transform-origin: center; /* 從中間伸展 */
+    opacity: 0;
+    
+    /* 這裡控制滑鼠離開時：慢慢縮回去 */
+    transition: transform 0.8s ease-in-out, 
+                opacity 0.8s ease-in-out;
+}
+
+/* --- 觸發狀態 (進場快 0.2s) --- */
+/* 同時處理 Hover 和 JS 賦予的 is-active */
+.research-box:hover .technology::after,
+.research-box.is-active .technology::after {
+    transform: scaleX(1);
+    opacity: 1;
+    
+    /* 覆寫 transition：進場變快 */
+    transition: transform 0.2s cubic-bezier(0, 0.5, 0.2, 1), 
+                opacity 0.2s cubic-bezier(0, 0.5, 0.2, 1);
+}
+
+/* --- 文字發光同步 --- */
+.technology {
+    transition: text-shadow 0.8s ease-in-out; /* 預設離開慢 */
+}
+
+.research-box:hover .technology,
+.research-box.is-active .technology {
+    text-shadow: 0 0 5px var(--accent);
+    transition: text-shadow 0.2s cubic-bezier(0, 0.5, 0.2, 1);
 }
 
 }
