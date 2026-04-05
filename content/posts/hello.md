@@ -13,14 +13,14 @@ draft: false
 <div class="profile-container">
 <div class="profile-pic-wrapper">
     <div class="profile-pic">
-        <img src="img/avatar-peian-1.jpg" id="avatar" alt="個人照" >
+        <img src="img/avatar-peian-2.jpg" id="avatar" alt="個人照" >
     </div></div>
     <div class="profile-text">
         <h1 style="text-align: center;  line-height:30px; margin-top:30px;margin-bottom:5px; margin-left:-40px;font-size: 22px;">陳沛安<br> peian chen</h1>
         <div class="info-wrapper">
         <ul>
             <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="chen1019.ee11@nycu.edu.tw" class="href">chen1019.ee11@nycu.edu.tw</a></li>
-            <i class="fa-solid fa-envelope"></i></span><a href="chen861019@gmail.com" class="href">chen861019@gmail.com</a></li>
+            <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="chen861019@gmail.com" class="href">chen861019@gmail.com</a></li>
             <li style="margin:5px 0;"><span class="fa-li"><i class="fa-brands fa-github"></i></span><a href="https://github.com/chen861019" class="href">github.com/chen861019</a></li>
             <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span style="font-size:16px;">國⽴陽明交通⼤學 電機⼯程學系 博⼠班</li>
                     </ul>
@@ -28,15 +28,6 @@ draft: false
         </div>
     </div>
 </div>
-</div>
-
-<div class="section-container"> <h1 id="language" class="title"><i class="fa-solid fa-language"> 語言</h1></i>
-    
-<div class="language-container">
-                <div class="language-item">Chinese</div>
-                <div class="language-item">English</div>
-                <div class="language-item">Japanese <br>(basic)</div>
-            
 </div>
 
 <div class="section-container"> <h1 id="skill" class="title"><i class="fas fa-lightbulb"> 技能</h1></i>
@@ -347,7 +338,7 @@ draft: false
     </ul>
 </div></div>
 <div class="section-container">
-<h1 id="experience" class="title"><i class="fa-solid fa-briefcase"> 經歷</h1></i> 
+<h1 id="experience" class="title"><i class="fa-solid fa-trophy"> 參賽經歷</h1></i> 
 <div class="custom-section">
 <div class="exp-part">   
 <div class="exp-card first-card" year="2024">
@@ -422,7 +413,7 @@ draft: false
 
 
 <div class="section-container">
-<h1 id="research" class="title" ><i class="fa-solid fa-magnifying-glass"> 研究與專案經歷</h1></i>
+<h1 id="research" class="title" ><i class="fa-solid fa-magnifying-glass"> 研究經歷</h1></i>
 <div  class="research-section">
         <ul >
             <li><div class="research-box"><strong>微重⼒模擬系統平台
@@ -449,7 +440,14 @@ draft: false
 <div class="technology-item itemcolumn"><div class="technology">期刊論⽂：</div>
 <div class="research-text">● Biosensors & Bioelectronics</div><div class="research-text">● Sensors and Actuators A</div></div></div>
 </li>
-<li><div class="research-box"><strong>國際學術研討會發表
+        </ul>
+    </p>
+</div></div>
+
+<div class="section-container" style="margin-top: 0px;">
+<h1 id="seminar"  class="title" style="margin-top:10px; "><i class="fa-solid fa-comments"> 研討會經歷</h1></i>
+    <div  class="seminar-section">
+<div class="research-box"><strong>國際學術研討會發表
 <br>Research Presentations<br>台灣 / ⽇本 / 美國（2024–2025）</strong><br>
 <p class="research-text">● 2024 DMS (NAIST) – CEFMS (NYCU) Joint Symposium – Oral Presentation</p>
 <p class="research-text">● 2024 International Conference on Smart Sensors (ICSS 2024) 
@@ -457,74 +455,13 @@ Poster</p>
 <p class="research-text">● 2025 Texas A&M University (USA) – Research Presentation</p>
 <p class="research-text">● 2025 RIES–CEFMS Joint Symposium, Hokkaido University
 (Japan) – Poster</p></div>
-</li>
-        </ul>
-    </p>
-</div></div>
+
+</div>
 
 <div class="section-container" style="margin-top: 0px;">
 <h1 id="display"  class="title" style="margin-top:10px; "><i class="fa-solid fa-table"> 實作展示</h1></i>
+    <div  class="display-section">
 
-
-<div class="comparison-container" >
-  <div class="comparison-header">
-    <div class="comp-card legacy">
-    <div style="display:flex; flex-direction: column; align-items: center;">
-      <div class="comp-tag">PAST:</div>
-      <div class="comp-content">
-        <p><i class="fa-solid fa-x"></i> 巴噗巴噗</p>
-        <p><i class="fa-solid fa-x"></i> 巴噗巴噗</p>
-        <p><i class="fa-solid fa-x"></i> 巴噗巴噗</p>
-      </div>
-    </div></div>
-    
-<div class="comp-vs">VS</div>
-
-<div class="comp-card optimized">
-<div style="display:flex; flex-direction: column; align-items: center;">
-      <div class="comp-tag primary">NOW:</div>
-      <div class="comp-content primary-content">
-        <p>  <i class="fa-solid fa-v"></i>巴噗巴噗</p>
-        <p>  <i class="fa-solid fa-v"></i>巴噗巴噗</p>
-        <p>  <i class="fa-solid fa-v"></i>巴噗巴噗</p>
-      </div>
-    </div>
-  </div> </div>
-
-  <div class="step-nav">
-     </div>
-</div>
-
-<section class="excel-container">
-
-<div class="excel-guide-container">
-  <div class="step-nav">
-    <div class="step-box" id="step1">
-      <div class="step-num">01</div>
-      <div class="step-info">哈哈哈</div><p class="step-text"><strong>● </strong>啦啦啦</p><p class="step-text"><strong>○ </strong>啦啦啦</p>
-      <div class="scan-line"></div>
-    </div>
-    
-<div class="step-arrow">
-      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
-    </div>
-
-<div class="step-box" id="step2">
-      <div class="step-num">02</div>
-      <div class="step-info">哈哈哈</div><p class="step-text"><strong>● </strong>啦啦啦</p><p class="step-text"><strong>○ </strong>啦啦啦</p>
-      <div class="scan-line"></div>
-    </div>
-
-<div class="step-arrow">
-      <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
-    </div>
-
-<div class="step-box" id="step3">
-      <div class="step-num">03</div>
-      <div class="step-info">哈哈哈</div><p class="step-text"><strong>● </strong>啦啦啦</p><p class="step-text"><strong>○ </strong>啦啦啦</p>
-      <div class="scan-line"></div>
-    </div>
-  </div>
 
 </div>
 

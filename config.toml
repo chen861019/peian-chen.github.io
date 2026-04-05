@@ -47,16 +47,21 @@ defaultContentLanguage = "zh-tw"
         weight = 2
       [[languages.zh-tw.menu.main]]
         identifier = "experience"
-        name = "經歷"
+        name = "參賽經歷"
         url = "/#experience"
         weight = 3
       [[languages.zh-tw.menu.main]]
         identifier = "research"
-        name = "研究與專案經歷"
+        name = "研究經歷"
         url = "/#research"
         weight = 4
+      [[languages.zh-tw.menu.main]]
+        identifier = "seminar"
+        name = "研討會經歷"
+        url = "/#seminar"
+        weight = 5
       [[languages.zh-tw.menu.main]]
         identifier = "display"
         name = "實作展示"
         url = "/#display"
-        weight = 5
+        weight = 6

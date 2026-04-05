@@ -195,10 +195,10 @@ const img2 = "img/avatar-peian-2.jpg";
         // 2. 在動畫轉到側面 (90度) 的瞬間換圖
         // 0.8s 的一半是 400ms
         setTimeout(() => {
-            if (apic.src.includes("peian-1")) {
-                apic.src = img2;
-            } else {
+            if (apic.src.includes("peian-2")) {
                 apic.src = img1;
+            } else {
+                apic.src = img2;
             }
         }, 400);
 
@@ -216,46 +216,6 @@ const img2 = "img/avatar-peian-2.jpg";
         performFlip();
     });
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    const steps = document.querySelectorAll('.step-box');
-    const overlay = document.getElementById('excelOverlay');
-    let currentStep = 0;
-    
-    // --- 1. 輪流閃爍邏輯 ---
-    const stepInterval = setInterval(() => {
-      // 移除所有人的 active
-      steps.forEach(s => s.classList.remove('active'));
-      // 亮起當前這一個
-      steps[currentStep].classList.add('active');
-      // 下一個
-      currentStep = (currentStep + 1) % steps.length;
-    }, 5000);
-
-    // --- 2. 點擊解鎖邏輯 ---
-    overlay.addEventListener('click', () => {
-      // 停止輪流閃爍
-      clearInterval(stepInterval);
-      
-      // 移除遮罩
-      overlay.style.opacity = '0';
-      overlay.style.pointerEvents = 'none';
-      
-      // 讓所有步驟呈現「已解鎖」的微亮狀態
-      steps.forEach(s => {
-        s.classList.add('active');
-        s.style.transform = 'scale(1)';
-        s.style.opacity = '0.8';
-      });
-      
-      console.log("Excel 展示模式已啟動");
-    });
-  });
-
-  document.addEventListener('focusin', function() {
-  console.log('目前的焦點在：', document.activeElement);
-}, true);
-
 
 
 </script>
