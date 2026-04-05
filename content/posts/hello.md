@@ -19,9 +19,10 @@ draft: false
         <h1 style="text-align: center;  line-height:30px; margin-top:30px;margin-bottom:5px; margin-left:-40px;font-size: 22px;">陳沛安<br> peian chen</h1>
         <div class="info-wrapper">
         <ul>
-            <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="chen861019@gmail.com" class="href">chen861019@gmail.com</a></li>
+            <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-envelope"></i></span><a href="chen1019.ee11@nycu.edu.tw" class="href">chen1019.ee11@nycu.edu.tw</a></li>
+            <i class="fa-solid fa-envelope"></i></span><a href="chen861019@gmail.com" class="href">chen861019@gmail.com</a></li>
             <li style="margin:5px 0;"><span class="fa-li"><i class="fa-brands fa-github"></i></span><a href="https://github.com/chen861019" class="href">github.com/chen861019</a></li>
-            <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span style="font-size:16px;">國⽴陽明交通⼤學 博⼠ 電機⼯程學系</li>
+            <li style="margin:5px 0;"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span style="font-size:16px;">國⽴陽明交通⼤學 電機⼯程學系 博⼠班</li>
                     </ul>
         <p style="font-size:16px; margin-left:-30px;">具備嵌入式系統、FPGA與數位電路設計以及感測系統平台相關經驗的電機博⼠候選⼈。熟悉微控制器韌體開發、物聯網系統架構以及邊緣⼈⼯智慧（TinyML），並具備完整的軟硬體整合與系統開發能⼒。期望從事嵌入式系統、數位IC/FPGA設計、邊緣AI與智慧感測系統相關之研發⼯程職務。</p>
         </div>
