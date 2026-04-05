@@ -57,7 +57,7 @@ defaultContentLanguage = "zh-tw"
         weight = 4
       [[languages.zh-tw.menu.main]]
         identifier = "seminar"
-        name = "研討會經歷"
+        name = "研討會"
         url = "/#seminar"
         weight = 5
       [[languages.zh-tw.menu.main]]
