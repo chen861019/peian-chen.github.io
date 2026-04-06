@@ -46,22 +46,27 @@ defaultContentLanguage = "zh-tw"
         url = "/#skill"
         weight = 2
       [[languages.zh-tw.menu.main]]
-        identifier = "experience"
-        name = "參賽經歷"
-        url = "/#experience"
-        weight = 3
-      [[languages.zh-tw.menu.main]]
         identifier = "research"
-        name = "研究經歷"
+        name = "研究"
         url = "/#research"
-        weight = 4
+        weight = 3
       [[languages.zh-tw.menu.main]]
         identifier = "seminar"
         name = "研討會"
         url = "/#seminar"
+        weight = 4
+      [[languages.zh-tw.menu.main]]
+        identifier = "side-project"
+        name = "Side Project"
+        url = "/#side-project"
         weight = 5
+      [[languages.zh-tw.menu.main]]
+        identifier = "experience"
+        name = "經歷"
+        url = "/#experience"
+        weight = 6 
       [[languages.zh-tw.menu.main]]
         identifier = "display"
         name = "實作展示"
         url = "/#display"
-        weight = 6
+        weight = 7

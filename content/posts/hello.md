@@ -139,7 +139,7 @@ draft: false
            <strong class="skill-class"><i class="fa-solid fa-circle"></i> 邊緣AI與訊號處理：</strong><br>
             
  <div class="skill-item">
-                <div class="skill-tag">
+                <div class="skill-tag" style="cursor: pointer;" onclick="location.href='#side-project'">
                     <i class="fa-solid fa-seedling skill-icon"></i>
                     <div class="skill-info">
                         <span class="skill-name">TinyML</span>
@@ -176,22 +176,13 @@ draft: false
                     </div>
                 </div>
             </div>
-            <div class="skill-item">
-                <div class="skill-tag">
-                    <i class="fa-solid fa-code-branch skill-icon"></i> 
-                    <div class="skill-info">
-                        <span class="skill-name">演算法設計</span>
-                        <span class="skill-desc">瑪卡巴卡</span>
-                    </div>
-                </div>
-            </div>
-        </li>
+                    </li>
 
 <li>
            <strong class="skill-class"><i class="fa-solid fa-circle"></i> 演算法與資料結構：</strong><br>
             
  <div class="skill-item">
-                <div class="skill-tag">
+                <div class="skill-tag" style="cursor: pointer;" onclick="location.href='#display'">
                     <i class="fa-solid fa-sitemap skill-icon"></i>
                     <div class="skill-info">
                         <span class="skill-name">資料結構</span>
@@ -201,7 +192,7 @@ draft: false
             </div>
 
 <div class="skill-item">
-                <div class="skill-tag">
+                <div class="skill-tag" style="cursor: pointer;" onclick="location.href='#display'">
                     <i class="fa-solid fa-circle-nodes skill-icon"></i> 
                     <div class="skill-info">
                         <span class="skill-name">圖論演算法</span>
@@ -215,7 +206,7 @@ draft: false
            <strong class="skill-class"><i class="fa-solid fa-circle"></i> FPGA / 數位電路設計：</strong><br>
             
  <div class="skill-item">
-                <div class="skill-tag">
+                <div class="skill-tag" style="cursor: pointer;" onclick="location.href='#display'">
                     <i class="fa-solid fa-file-code skill-icon"></i>
                     <div class="skill-info">
                         <span class="skill-name">Verilog</span>
@@ -225,7 +216,7 @@ draft: false
             </div>
 
 <div class="skill-item">
-                <div class="skill-tag">
+                <div class="skill-tag" style="cursor: pointer;" onclick="location.href='#display'">
                     <i class="fa-solid fa-diagram-project skill-icon"></i> 
                     <div class="skill-info">
                         <span class="skill-name">RTL設計</span>
@@ -235,7 +226,7 @@ draft: false
             </div>
 
 <div class="skill-item">
-                <div class="skill-tag">
+                <div class="skill-tag" style="cursor: pointer;" onclick="location.href='#display'">
                     <i class="fa-solid fa-border-all skill-icon"></i> 
                     <div class="skill-info">
                         <span class="skill-name">FPGA開發</span>
@@ -337,11 +328,105 @@ draft: false
         </li>
     </ul>
 </div></div>
+
+
+
 <div class="section-container">
-<h1 id="experience" class="title"><i class="fa-solid fa-trophy"> 參賽經歷</h1></i> 
+<h1 id="research" class="title" ><i class="fa-solid fa-magnifying-glass"> 研究</h1></i>
+<div  class="research-section">
+        <ul >
+<li><div class="research-container"><div class="research-box"><strong style="margin-bottom:10px;">微重⼒模擬系統平台
+<br>Microgravity Simulation System Platform</strong>
+<p class="research-text">● 開發雙軸 Random Positioning Machine (RPM)，⽤於微重⼒模擬實驗設計多軸運動控制的嵌入式控制系統整合感測器、影像模組與即時資料擷取系統</p>
+<p class="research-text">● 設計多軸運動控制的嵌入式控制系統</p>
+<p class="research-text">● 整合感測器、影像模組與即時資料擷取系統</p></div>
+<div class="research-pic"><input type="checkbox" id="zoom-1" class="zoom-input">    
+    <label for="zoom-1" class="zoom-label">
+        <img src="img/avatar-peian-1.jpg" alt="點擊放大" class="zoom-img"></label></div></div><div class="technology-item"><span class="technology">技術：嵌入式系統、運動控制、感測系統整合</span></div>
+</li>
+
+<li><div class="research-container"><div class="research-box"><strong style="margin-bottom:10px;">穿戴式 IoT 裝置開發平台
+<br>Wearable IoT Device Development Platform</strong>
+<p class="research-text">● 開發基於 nRF52840 的穿戴式感測裝置並實現 BLE 無線通訊系統</p>
+<p class="research-text">● 建⽴⼿機應⽤程式與雲端資料庫系統架構，⽤於 IoT 資料管理</p>
+<p class="research-text">● 開發嵌入式 LVGL GUI 介⾯⽤於裝置即時資料顯示與操作</p></div>
+<div class="research-pic"><input type="checkbox" id="zoom-2" class="zoom-input">    
+    <label for="zoom-2" class="zoom-label">
+        <img src="img/avatar-peian-2.jpg" alt="點擊放大" class="zoom-img"></label></div></div><div class="technology-item"><span class="technology">技術：嵌入式系統、BLE通訊、IoT系統架構</span></div>
+</li>
+<li><div class="research-container"><div class="research-box"><strong style="margin-bottom:10px;">仿⽣微流體⽣醫⼯程平台<br>Biomimetic Microfluidic Bioengineering Platform</strong>
+<p class="research-text">● 設計基於趨溫性 (thermotaxis) 
+與流變性 (rheotaxis) 的微流道分選平台</p>
+<p class="research-text">● 開發溫度梯度控制系統與影像式運動分析平台</p>
+<p class="research-text">● 建⽴⾃動化資料擷取與分析系統</p></div>
+<div class="research-pic"><input type="checkbox" id="zoom-3" class="zoom-input">    
+    <label for="zoom-3" class="zoom-label">
+        <img src="img/avatar-peian-1.jpg" alt="點擊放大" class="zoom-img"></label></div></div><div class="technology-item"><span class="technology">獲獎：未來科技獎 2023</div>
+<div class="technology-item"><div class="technology">國際展出：CES 2024 – TTA Taiwan Tech Pavilion</div></div>
+<div class="technology-item itemcolumn"><div class="technology">期刊論⽂：</div>
+<div class="research-text">● Biosensors & Bioelectronics</div><div class="research-text">● Sensors and Actuators A</div></div>
+</li>
+        </ul>
+</div></div>
+
+<div class="section-container" style="margin-top: 0px;">
+<h1 id="seminar"  class="title" style="margin-top:10px; "><i class="fa-solid fa-comments"> 研討會</h1></i>
+    <div  class="seminar-section">
+<div class="seminar-box"><strong>國際學術研討會發表
+<br>Research Presentations<br>台灣 / ⽇本 / 美國（2024–2025）</strong><br>
+<p class="research-text">● 2024 DMS (NAIST) – CEFMS (NYCU) Joint Symposium – Oral Presentation</p>
+<p class="research-text">● 2024 International Conference on Smart Sensors (ICSS 2024) 
+Poster</p>
+<p class="research-text">● 2025 Texas A&M University (USA) – Research Presentation</p>
+<p class="research-text">● 2025 RIES–CEFMS Joint Symposium, Hokkaido University
+(Japan) – Poster</p></div>
+
+</div>
+
+<div class="section-container"> <h1 id="side-project" class="title"><i class="fa-solid fa-note-sticky"></i> side project</h1>
+<div  class="research-section">
+        <ul >
+<li><div class="research-container"><div class="research-box"><strong style="margin-bottom:10px;">微重⼒模擬系統平台
+<br>Microgravity Simulation System Platform</strong>
+<p class="research-text">● 開發雙軸 Random Positioning Machine (RPM)，⽤於微重⼒模擬實驗設計多軸運動控制的嵌入式控制系統整合感測器、影像模組與即時資料擷取系統</p>
+<p class="research-text">● 設計多軸運動控制的嵌入式控制系統</p>
+<p class="research-text">● 整合感測器、影像模組與即時資料擷取系統</p></div>
+<div class="research-pic"><input type="checkbox" id="zoom-4" class="zoom-input">    
+    <label for="zoom-4" class="zoom-label">
+        <img src="img/avatar-peian-1.jpg" alt="點擊放大" class="zoom-img"></label></div></div><div class="technology-item"><span class="technology">技術：嵌入式系統、運動控制、感測系統整合</span></div>
+</li>
+
+<li><div class="research-container"><div class="research-box"><strong style="margin-bottom:10px;">穿戴式 IoT 裝置開發平台
+<br>Wearable IoT Device Development Platform</strong>
+<p class="research-text">● 開發基於 nRF52840 的穿戴式感測裝置並實現 BLE 無線通訊系統</p>
+<p class="research-text">● 建⽴⼿機應⽤程式與雲端資料庫系統架構，⽤於 IoT 資料管理</p>
+<p class="research-text">● 開發嵌入式 LVGL GUI 介⾯⽤於裝置即時資料顯示與操作</p></div>
+<div class="research-pic"><input type="checkbox" id="zoom-5" class="zoom-input">    
+    <label for="zoom-5" class="zoom-label">
+        <img src="img/avatar-peian-1.jpg" alt="點擊放大" class="zoom-img"></label></div></div><div class="technology-item"><span class="technology">技術：嵌入式系統、BLE通訊、IoT系統架構</span></div>
+</li>
+<li><div class="research-container"><div class="research-box"><strong style="margin-bottom:10px;">仿⽣微流體⽣醫⼯程平台<br>Biomimetic Microfluidic Bioengineering Platform</strong>
+<p class="research-text">● 設計基於趨溫性 (thermotaxis) 
+與流變性 (rheotaxis) 的微流道分選平台</p>
+<p class="research-text">● 開發溫度梯度控制系統與影像式運動分析平台</p>
+<p class="research-text">● 建⽴⾃動化資料擷取與分析系統</p></div>
+<div class="research-pic"><input type="checkbox" id="zoom-6" class="zoom-input">    
+    <label for="zoom-6" class="zoom-label">
+        <img src="img/avatar-peian-1.jpg" alt="點擊放大" class="zoom-img"></label></div></div><div class="technology-item"><span class="technology">獲獎：未來科技獎 2023</div>
+<div class="technology-item"><div class="technology">國際展出：CES 2024 – TTA Taiwan Tech Pavilion</div></div>
+<div class="technology-item itemcolumn"><div class="technology">期刊論⽂：</div>
+<div class="research-text">● Biosensors & Bioelectronics</div><div class="research-text">● Sensors and Actuators A</div></div>
+</li>
+        </ul>
+</div></div>
+    
+
+
+<div class="section-container">
+<h1 id="experience" class="title"><i class="fa-solid fa-trophy"> 經歷</h1></i> 
 <div class="custom-section">
 <div class="exp-part">   
-<div class="exp-card first-card" year="2024">
+<div class="exp-card first-card">
         <div class="exp-dot" style="opacity: 0;"></div>
         <div class="exp-content">
         <div class="year">
@@ -354,12 +439,14 @@ draft: false
 <div class="exp-card">
         <div class="exp-dot" ></div>
         <div class="exp-content">
-        <strong class="year">2023</strong>
-        <h4 style="margin: 5px 0; font-size:18px;">研究所</h4>
-        <h4 style="margin: 5px 0; font-size:16px;">巴拉巴拉</h4>
-        <div class="exp-text">
+        <div class="year">
+        <strong >2023</strong>
+        <h4 style="margin: 5px 0; font-size:18px;">研究所</h4></div>
+                <div class="exp-text">
        <div class="exp-box"><strong style="font-size: 16px; ">未來科技獎</strong> <div class="rank">得獎</div></div>
-        <div class="exp-box"><strong style="font-size: 16px; padding-right:10%;">FITI創新創業激勵計畫</strong> <div class="rank">入圍</div></div></div></div>
+        <div class="exp-box"><strong style="font-size: 16px; padding-right:10%;">FITI創新創業激勵計畫</strong> <div class="rank">入圍</div></div></div><div class="pic"><input type="checkbox" id="zoom-8" class="zoom-input">    
+    <label for="zoom-8" class="zoom-label">
+        <img src="img/avatar-peian-2.jpg" alt="點擊放大" class="zoom-img"></label></div></div></div>
     </div>
 
 <div class="exp-card">
@@ -411,56 +498,58 @@ draft: false
 
 </div></div>
 
-
-<div class="section-container">
-<h1 id="research" class="title" ><i class="fa-solid fa-magnifying-glass"> 研究經歷</h1></i>
-<div  class="research-section">
-        <ul >
-            <li><div class="research-box"><strong>微重⼒模擬系統平台
-<br>Microgravity Simulation System Platform</strong><br>
-<p class="research-text">● 開發雙軸 Random Positioning Machine (RPM)，⽤於微重⼒模擬實驗設計多軸運動控制的嵌入式控制系統整合感測器、影像模組與即時資料擷取系統</p>
-<p class="research-text">● 設計多軸運動控制的嵌入式控制系統</p>
-<p class="research-text">● 整合感測器、影像模組與即時資料擷取系統</p>
-<div class="technology-item"><span class="technology">技術：嵌入式系統、運動控制、感測系統整合</span></div></div>
-</li>
-            <li><div class="research-box"><strong>穿戴式 IoT 裝置開發平台
-<br>Wearable IoT Device Development Platform</strong><br>
-<p class="research-text">● 開發基於 nRF52840 的穿戴式感測裝置並實現 BLE 無線通訊系統</p>
-<p class="research-text">● 建⽴⼿機應⽤程式與雲端資料庫系統架構，⽤於 IoT 資料管理</p>
-<p class="research-text">● 開發嵌入式 LVGL GUI 介⾯⽤於裝置即時資料顯示與操作</p>
-<div class="technology-item"><span class="technology">技術：嵌入式系統、BLE通訊、IoT系統架構</span></div></div>
-</li>
-<li><div class="research-box"><strong>仿⽣微流體⽣醫⼯程平台<br>Biomimetic Microfluidic Bioengineering Platform</strong><br>
-<p class="research-text">● 設計基於趨溫性 (thermotaxis) 
-與流變性 (rheotaxis) 的微流道分選平台</p>
-<p class="research-text">● 開發溫度梯度控制系統與影像式運動分析平台</p>
-<p class="research-text">● 建⽴⾃動化資料擷取與分析系統</p>
-<div class="technology-item"><div class="technology">獲獎：未來科技獎 2023</div></div>
-<div class="technology-item"><div class="technology">國際展出：CES 2024 – TTA Taiwan Tech Pavilion</div></div>
-<div class="technology-item itemcolumn"><div class="technology">期刊論⽂：</div>
-<div class="research-text">● Biosensors & Bioelectronics</div><div class="research-text">● Sensors and Actuators A</div></div></div>
-</li>
-        </ul>
-    </p>
-</div></div>
-
-<div class="section-container" style="margin-top: 0px;">
-<h1 id="seminar"  class="title" style="margin-top:10px; "><i class="fa-solid fa-comments"> 研討會經歷</h1></i>
-    <div  class="seminar-section">
-<div class="research-box"><strong>國際學術研討會發表
-<br>Research Presentations<br>台灣 / ⽇本 / 美國（2024–2025）</strong><br>
-<p class="research-text">● 2024 DMS (NAIST) – CEFMS (NYCU) Joint Symposium – Oral Presentation</p>
-<p class="research-text">● 2024 International Conference on Smart Sensors (ICSS 2024) 
-Poster</p>
-<p class="research-text">● 2025 Texas A&M University (USA) – Research Presentation</p>
-<p class="research-text">● 2025 RIES–CEFMS Joint Symposium, Hokkaido University
-(Japan) – Poster</p></div>
-
-</div>
-
 <div class="section-container" style="margin-top: 0px;">
 <h1 id="display"  class="title" style="margin-top:10px; "><i class="fa-solid fa-table"> 實作展示</h1></i>
     <div  class="display-section">
+    <ul>
+<li>
+           <strong class="display-class"><i class="fa-solid fa-circle"></i> 演算法與資料結構：</strong><br>
+  <div class="display-container">          
+ <div class="display-item">
+                <div class="display-tag" style="cursor: pointer;" onclick="location.href=''">
+                    <div class="display-info">
+                        <span class="display-name">資料結構</span>
+                    </div>
+                </div>
+            </div>
+
+<div class="display-item">
+                <div class="display-tag" style="cursor: pointer;" onclick="location.href=''">
+                    <div class="display-info">
+                        <span class="display-name">資料結構</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+<li><strong class="skill-class"><i class="fa-solid fa-circle"></i> FPGA / 數位電路設計：</strong><br>
+  <div class="display-container">          
+ <div class="display-item">
+                <div class="display-tag" style="cursor: pointer;" onclick="location.href=''">
+                    <div class="display-info">
+                        <span class="display-name">資料結構</span>
+                    </div>
+                </div>
+            </div>
+
+<div class="display-item">
+                <div class="display-tag" style="cursor: pointer;" onclick="location.href=''">
+                    <div class="display-info">
+                        <span class="display-name">資料結構</span>
+                    </div>
+                </div>
+            </div>
+
+<div class="display-item">
+                <div class="display-tag" style="cursor: pointer;" onclick="location.href=''">
+                    <div class="display-info">
+                        <span class="display-name">資料結構</span>
+                    </div>
+                </div>
+            </div></div>
+        </li>
+    </ul>
+</div></div>
 
 
 </div>

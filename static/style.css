@@ -87,7 +87,7 @@ html {
 .navigation-menu__inner > li {
     flex: 0 0 auto;
     margin-top: 15px;
-    padding-left: 10px;
+    padding-left: 6px;
     width: auto;
     white-space: nowrap;
     text-align: center;    
@@ -147,6 +147,11 @@ html {
 
   img {
   border: 6px solid rgba(255, 255, 254, 0.1);
+}
+
+.no-border img {
+    border: none;
+    padding: 0; /* 通常 padding 也會一併移除，否則會留白 */
 }
 
 .profile-pic-wrapper {
@@ -273,7 +278,8 @@ html {
 .custom-section,
 .research-section,
 .seminar-section,
-.display-section {
+.display-section,
+.project-container {
     background: linear-gradient(
         rgba(95, 95, 97, 0.7) 0%, 
         rgba(32, 33, 36, 0.3) 50% 
@@ -293,8 +299,9 @@ html {
 .skills-container:hover,
 .custom-section:hover,
 .research-section:hover,
-.seminar-section,
-.display-section {
+.seminar-section:hover,
+.display-section:hover,
+.project-container:hover {
     transform: scale(1.004);
     border: 1px solid rgba(243, 244, 255, 0.8);
     border-left: 5px solid var(--accent);
@@ -386,6 +393,8 @@ html {
     padding: 0px 25px;
     margin-top: 20px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .seminar-section{
@@ -395,6 +404,15 @@ html {
 }
 
 .display-section{
+    padding: 20px 50px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.project-container {
     padding: 0px 25px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -415,6 +433,7 @@ html {
     overflow: hidden; /* 防止線條縮放時溢出 */
     cursor: default;
     text-shadow: 3px 3px 5px rgba(0, 21, 255, 0.5);
+    padding-right: 20px;
 }
 
 
@@ -464,7 +483,7 @@ html {
     margin-top: -50px !important;
   }
 
-  .skill-class {
+  .skill-class, .display-class {
      font-size:20px;
   }
 
@@ -492,7 +511,8 @@ html {
     align-items: flex-start;
 }
 
-.skill-name {
+
+.skill-name, .display-name{
     /* 確保名字有固定的行高，不會被擠壓 */
     line-height: 1.2;
     display: block;
@@ -526,13 +546,23 @@ html {
         height 0.2s ease, 
 }
 
+.display-container {
+    display: flex;          /* 開啟 Flex 佈局 */
+    flex-wrap: wrap;       /* 關鍵：空間不夠自動換行 */
+    gap: 14px;             /* 代替 margin，更優雅地控制標籤間距 */
+    width: 100%;           /* 隨頁面寬度自動伸縮 */
+    padding: 10px;
+}
+
+
 
 
 .skill-tag:hover a{
     color: #fff;
 }
 
-.skill-icon {
+
+.skill-icon, .display-icon{
     padding-top: 2px;
     padding-right: 5px;
         flex-shrink: 0;
@@ -566,12 +596,60 @@ html {
     min-width: 18px;
 }
 
+
 .skill-item:hover .skill-desc {
     visibility: visible;
     opacity: 1;
     max-height: 45px;    /* 設定一個夠大的數值 */
     padding-left: 12px;
     border-left: 1px solid var(--menu);
+}
+
+/* 1. 外層容器：負責偵測寬度與換行 */
+.display-container {
+    display: flex;          /* 開啟 Flex 佈局 */
+    flex-wrap: wrap;       /* 關鍵：空間不夠自動換行 */
+    gap: 14px;             /* 代替 margin，更優雅地控制標籤間距 */
+    width: 100%;           /* 隨頁面寬度自動伸縮 */
+    padding: 10px;
+}
+
+/* 2. 每個項目的佔位 */
+.display-item {
+    display: block;        /* 既然在 Flex 裡，設為 block 即可 */
+    width: 220px;          /* 你要求的固定寬度 */
+    height: 45px;          /* 你要求的固定高度 */
+    position: relative;    /* 如果內部 tag 需要絕對定位，父層改為 relative */
+}
+
+/* 3. 標籤本體樣式修正 */
+.display-tag {
+    /* 移除 position: absolute; (除非你要做特殊的懸浮效果) */
+    /* 移除 pointer-events: none; (否則滑鼠點不到，無法做 Hover) */
+    
+    display: flex;
+    align-items: center;    /* 垂直居中 */
+    width: 100%;            /* 填滿 display-item 的 220px */
+    height: 100%;           /* 填滿 display-item 的 45px */
+    
+    padding: 0 15px;
+    background-color: rgba(255, 255, 254, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    box-sizing: border-box; /* 確保 padding 不會撐大盒子 */
+    
+    box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
+                -0.1px -0.1px 1px rgba(209, 213, 255, 0.8);
+    
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Hover 效果範例 */
+.display-tag:hover {
+    background-color: rgba(255, 255, 254, 0.2);
+    transform: translateY(-2px); /* 輕微浮起感 */
 }
 
   .exp-card {
@@ -700,7 +778,7 @@ html {
     font-weight: 900;
     transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     z-index: 1;
-    width: 200px;
+    width: 140px;
     flex-shrink: 0;
 }
 
@@ -741,11 +819,13 @@ html {
 }
 
 .exp-text {
-    flex: 1;                 /* 關鍵：自動塞滿「剩下所有空間」 */
+    flex: 0;                 /* 關鍵：自動塞滿「剩下所有空間」 */
     min-width: 0;
+    width: 0;
     max-height: 0; /* 預設成就隱藏 */
     opacity: 0;
     overflow: hidden;
+    white-space: nowrap;
     transition: max-height 1s ease, opacity 0.5s ease, transform 0.5s ease;
     color: #141468;
     display: flex;
@@ -773,9 +853,90 @@ html {
 
 
 .exp-card:hover .exp-text {
+    flex: 1;
+    width: auto;
+    white-space: wrap;
     opacity: 1;
     max-height: 500px; /* 展開成就 */
     transition: background 0.5s cubic-bezier(0, 0.5, 0.2, 1);
+}
+
+.pic {
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.pic img {
+    margin: 0;
+    border: none !important;    /* 去掉邊框 */
+    padding: 0 !important;       /* 去掉內邊距 */
+}
+
+.exp-card:hover .pic {
+    width: 200px;
+    white-space: wrap;
+    opacity: 1;
+    max-height: 500px; /* 展開成就 */
+    z-index: 9;
+}
+
+/* 1. 隱藏核取方塊 */
+.zoom-input {
+    display: none;
+}
+
+/* 2. 初始圖片樣式 */
+.zoom-label .zoom-img {
+    width: 220px;
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 8px;
+    display: block; /* 消除下方 3px 縫隙 */
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+/* 點擊放大狀態：修正捲動位移 */
+.zoom-input:checked + .zoom-label .zoom-img {
+    /* 1. 依然使用 fixed，但我們要對抗父層的 transform */
+    position: fixed !important;
+    
+    /* 2. 使用 inset 0 + margin auto 是最能突破父層限制的招式 */
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: auto !important;
+
+    /* 3. 尺寸限制（非常重要，有寬高 margin auto 才會置中） */
+    width: auto !important;
+    max-width: 90vw !important;
+    max-height: 80vh !important;
+
+    /* 4. 放大倍率（這裡不使用 translate -50%，因為 margin auto 已經做了） */
+    transform: scale(0.5) !important;
+    
+    /* 5. 確保層級最高 */
+    z-index: 10001 !important;
+    
+    display: block !important;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+}
+
+/* 背景遮罩：也要強制鎖定全螢幕 */
+.zoom-input:checked + .zoom-label::before {
+    content: "";
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    z-index: 10000 !important;
 }
 
 .technology-item::before {
@@ -792,14 +953,31 @@ html {
                 opacity 0.8s ease-in-out;
 }
 
-.research-box:hover .technology-item::before {
+.research-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.research-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1050px;
+    padding: 20px;
+    padding-bottom: 0;
+    position: relative; /* 為了讓 ::before 的絕對定位以這個為基準 */
+}
+
+.research-section li:hover .technology-item::before {
     transform: scaleX(1);
     opacity: 1;
     transition: transform 0.2s cubic-bezier(0, 0.5, 0.2, 1), 
                 opacity 0.2s cubic-bezier(0, 0.5, 0.2, 1);
 }
 
-.research-box.is-active .technology-item::before {
+.research-section li.is-active .technology-item::before {
     transform: scaleX(1);
     opacity: 1;
     /* 進場快 (0.2s) */
@@ -807,11 +985,27 @@ html {
                 opacity 0.2s cubic-bezier(0, 0.5, 0.2, 1);
 }
 
-.research-box.is-active .technology {
+.research-section li.is-active .technology {
     text-shadow: 0 0 5px var(--accent);
     transition: text-shadow 0.2s cubic-bezier(0, 0.5, 0.2, 1);
 }
 
+.research-pic {
+    width: auto;          /* 改為 auto，讓它被圖片大小決定 */
+    max-width: 500px;     /* 限制最大寬度即可 */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 0;      /* 先取消負的外距，看看縫隙是否消失 */
+    flex-shrink: 0;
+}
+
+.research-pic img {
+    border: none !important;    /* 去掉邊框 */
+    padding: 0 !important;       /* 去掉內邊距 */
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
   
 
 }
@@ -900,6 +1094,7 @@ body {
     .info-wrapper {
         display: block; /* 窄到一定程度時改回區塊 */
         padding-left: 15%; /* 或是微調一個視覺上舒服的縮排 */
+        padding-right: 5%;
     }
 
     .skill-tag {
@@ -1075,6 +1270,80 @@ body {
     transition: opacity 0.5s ease-out;
 }
 
+/* 1. 隱藏所有核取方塊 */
+.zoom-input {
+    display: none;
+}
+
+/* 2. 初始圖片樣式 */
+.zoom-label .zoom-img {
+    width: 220px; /* 或者 100% 取決於你的容器 */
+    height: auto;
+    cursor: zoom-in;
+    border-radius: 8px;
+    
+    /* 必須給予初始 transform，動畫才不會歪掉 */
+    position: relative;
+    transform: translate(0, 0) scale(1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+/* 3. 點擊放大狀態 (當任何 .zoom-input 被選中時) */
+/* 當點擊放大時 */
+.zoom-input:checked + .zoom-label .zoom-img {
+    /* 1. 強制脫離原本的位置 */
+    position: fixed !important;
+    
+    /* 2. 絕對中心點 */
+    top: 25% !important;
+    left: 50% !important;
+    
+    /* 3. 往回拉中心點 (負號絕對不能少) */
+    transform: translate(-50%, -50%) scale(0.5) !important;
+    
+    /* 4. 解決「怪怪的」核心：徹底歸零所有外力 */
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important; /* 去掉 main.css 的 8px 邊框 */
+    
+    /* 5. 尺寸校正：不要讓它繼承原本的小圖高度 */
+    width: auto !important;
+    height: auto !important;
+    max-width: 90vw !important;  /* 寬度不超過螢幕 90% */
+    max-height: 80vh !important; /* 高度不超過螢幕 80% */
+    
+    /* 6. 其他設定 */
+    z-index: 10000 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    transition: transform 0.4s ease;
+}
+
+/* 黑色背景遮罩 */
+.zoom-input:checked + .zoom-label::before {
+    content: "";
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    z-index: 9999 !important;
+}
+
+/* 4. 解決 nav ::after 跟著放大的問題 */
+/* 確保你的導覽列樣式有加上排除邏輯，或精確指定對象 */
+nav a::after {
+    /* 這裡維持原樣 */
+    transform: scaleX(0); 
+}
+
+/* 只有在滑鼠 hover 時才讓 nav 的線放大，不要連動到 checkbox */
+nav a:hover::after {
+    transform: scaleX();
+}
+
  
   .profile-text h1 {
     margin-left: 0px !important;
@@ -1088,13 +1357,41 @@ body {
     font-size: 23px;
   }
 
+  .research-box {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
   .research-section ul{
     line-height: 1.8 !important;
   }
 
+.research-pic {
+    width: auto;          /* 改為 auto，讓它被圖片大小決定 */
+    max-width: 500px;     /* 限制最大寬度即可 */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 0;      /* 先取消負的外距，看看縫隙是否消失 */
+    flex-shrink: 0;
+    text-align: center;
+}
+
+  .research-pic img {
+    border: none !important;    /* 去掉邊框 */
+    padding: 0 !important;       /* 去掉內邊距 */
+    margin: 5px;
+}
+
+.technology-item {
+    padding-right: 0px;
+}
+
   .skills-container {
     padding: 20PX;
   }
+
+  
+  
 
   .info-wrapper p {
     margin-right: 10px;
@@ -1105,6 +1402,57 @@ body {
     flex-direction: column;
     line-height: 1.5;
   }
+
+  .display-section {
+    padding: 20px;
+  }
+
+  /* 1. 外層容器：負責偵測寬度與換行 */
+.display-container {
+    display: flex;          /* 開啟 Flex 佈局 */
+    flex-wrap: wrap;       /* 關鍵：空間不夠自動換行 */
+    gap: 14px;             /* 代替 margin，更優雅地控制標籤間距 */
+    width: 100%;           /* 隨頁面寬度自動伸縮 */
+    padding: 10px;
+}
+
+/* 2. 每個項目的佔位 */
+.display-item {
+    display: block;        /* 既然在 Flex 裡，設為 block 即可 */
+    width: 100%;          /* 你要求的固定寬度 */
+    height: 45px;          /* 你要求的固定高度 */
+    position: relative;    /* 如果內部 tag 需要絕對定位，父層改為 relative */
+}
+
+/* 3. 標籤本體樣式修正 */
+.display-tag {
+    /* 移除 position: absolute; (除非你要做特殊的懸浮效果) */
+    /* 移除 pointer-events: none; (否則滑鼠點不到，無法做 Hover) */
+    
+    display: flex;
+    align-items: center;    /* 垂直居中 */
+    width: 100%;            /* 填滿 display-item 的 220px */
+    height: 100%;           /* 填滿 display-item 的 45px */
+    
+    padding: 0 15px;
+    background-color: rgba(255, 255, 254, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    box-sizing: border-box; /* 確保 padding 不會撐大盒子 */
+    
+    box-shadow: 3px 3px 2px rgba(0, 20, 132, 0.2),
+                -0.1px -0.1px 1px rgba(209, 213, 255, 0.8);
+    
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Hover 效果範例 */
+.display-tag:hover {
+    background-color: rgba(255, 255, 254, 0.2);
+    transform: translateY(-2px); /* 輕微浮起感 */
+}
 
 }
 
@@ -1117,7 +1465,6 @@ body {
 .technology {
     white-space: normal;
     display: flex;
-    
 }
 
 .technology::after {
@@ -1141,13 +1488,17 @@ body {
 /* --- 觸發狀態 (進場快 0.2s) --- */
 /* 同時處理 Hover 和 JS 賦予的 is-active */
 
-.research-box {
+.research-section ul{
+    margin-bottom: 0;
+}
+
+.research-section li{
     background-color: #ffffff12;
     border-radius: 5px;
 }
 
-.research-box:hover .technology::after,
-.research-box.is-active .technology::after {
+.research-section li:hover .technology::after,
+.research-section li.is-active .technology::after {
     transform: scaleX(1);
     opacity: 1;
     
@@ -1161,8 +1512,8 @@ body {
     transition: text-shadow 0.8s ease-in-out; /* 預設離開慢 */
 }
 
-.research-box:hover .technology,
-.research-box.is-active .technology {
+.research-section li:hover .technology,
+.research-section li.is-active .technology {
     text-shadow: 0 0 5px var(--accent);
     transition: text-shadow 0.2s cubic-bezier(0, 0.5, 0.2, 1);
 }
